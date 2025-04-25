@@ -64,7 +64,7 @@ function Post() {
   }
 
   async function handleDelete() {
-    const confirmDelete = window.confirm('Delete this post permanently?');
+    const confirmDelete = window.confirm('Delete this post?');
     if (confirmDelete) {
       await supabase.from('posts').delete().eq('id', id);
       navigate('/');
